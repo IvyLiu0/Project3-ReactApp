@@ -1,0 +1,120 @@
+.App {
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.Desc {
+  padding: 30px;
+}
+
+span {
+  font-size: 0.8em;
+  border: solid 1px lightgray;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.navItem {
+  background-color: rgb(184, 207, 143);
+  display: flex;
+  height: 200px;
+}
+
+.Logo {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  margin-top: 100px;
+  left: 80px;
+  font-family:monospace;
+  font-size: 40px;
+}
+
+.NavLogin:link {
+  text-decoration: none;
+}
+
+.NavLogin:visited {
+   color: white;
+}
+
+.navCart {
+  color: white;
+  position: absolute;
+  margin-top: 120px;
+  right: 100px;
+  font-family: monospace;
+}
+
+.faShoppingCart {
+  color: white;
+}
+
+.NavBox{
+  display: flex;
+  margin-left: 35%;
+}
+
+
+.Nav {
+  color: rgb(184, 207, 143);
+  font-size: 20px; 
+  font-family: monospace;
+}
+
+.Nav:link {
+  text-decoration: none;
+}
+
+.Nav:visited {
+  color:rgb(95, 114, 62);
+}
+
+.Nav:hover {
+  color: rgb(184, 207, 143);
+}
+
+.quantity {
+  display: inline;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.CartItems {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+.CartItem  {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.CartImage {
+  margin-left: 100px;
+}
+
+a:hover {
+  color: white;
+}
+
+.CheckOut {
+  width: 150px;
+  margin-left: 100px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.ListGroup {
+  margin: 50px 100px;
+}
+
+.Lite {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.Contiue {
+  margin-left: 100px;
+}
