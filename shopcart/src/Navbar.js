@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Home from "./Home";
 import { Cart } from "./Cart";
 import Login from "./Login";
+import Main from "./Main";
+import About from "./About";
+import Contact from "./Contact";
 
 export const NavBar = (props) => {
   return (
@@ -17,7 +20,7 @@ export const NavBar = (props) => {
             </Link>
           </h2>
           <div className="navCart">
-            <Link to="/signin" className="NavLogin">Login</Link>{" \xa0 "}
+            {/* <Link to="/signin" className="NavLogin">Login</Link>{" \xa0 "} */}
             <Link to="/cart">
               <FontAwesomeIcon icon={faShoppingCart} className="faShoppingCart" />
             </Link> {" "}
@@ -33,23 +36,29 @@ export const NavBar = (props) => {
           <Link to="/" className="Nav">Home</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
           <Link to="/product" className="Nav">Products</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
           <Link to="/about" className="Nav">About</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
-          <Link to="/contact" className="Nav">Contact</Link>
+          <Link to="/contact" className="Nav">Contact</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
+          <Link to="/signin" className="Nav">Login</Link>
         </nav>
         </div>
 
         <Routes>
           <React.Fragment>
-          <Route exact path="/product" 
+            <Route path="/" element={<Main />} />
+             <Route exact path="/product" 
               element={<Home
               itemList={props.itemList}
               handleIncrease={props.handleIncrease}
               handleDecrease={props.handleDecrease}
             />} />
           <Route path="/Cart" element={<Cart itemList={props.itemList} totalvalue={props.totalvalue} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/signin" element= {<Login />}></Route>
           </React.Fragment>
         </Routes>
       </Router>
+
+      
     </div>
   );
 };

@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { CartItems } from "./products";
 import { NavBar } from "./Navbar";
+import { Footer } from "./Footer";
 
 class App extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class App extends Component {
           handleIncrease={this.handleIncrease}
           handleDecrease={this.handleDecrease}
         />
+        <Footer />
       </div>
     );
   }
