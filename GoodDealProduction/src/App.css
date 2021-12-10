@@ -1,0 +1,179 @@
+.App {
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.Desc {
+  padding: 30px;
+}
+
+span {
+  font-size: 0.8em;
+  /* border: solid 1px lightgray; */
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.navItem {
+  background-color: rgb(45,98,163);
+  display: flex;
+  height: 250px;
+}
+
+.Logo {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  margin-top: 150px;
+  left: 80px;
+  font-family:monospace;
+  font-size: 40px;
+}
+
+.NavLogin:link {
+  text-decoration: none;
+}
+
+.NavLogin:visited {
+   color: white;
+}
+
+.navCart {
+  color: white;
+  position: absolute;
+  margin-top: 170px;
+  right: 100px;
+  font-family: monospace;
+}
+
+.faShoppingCart {
+  color: white;
+}
+
+.NavBox{
+  display: flex;
+  margin-left: 30%;
+}
+
+.NavBoxx{
+  background-color: rgb(45,98,163);
+  display: flex;
+  height: 350px;
+  font-family: monospace;
+  margin-top: 100px;
+}
+
+.footer {
+  margin-top: 30px;
+  margin-left: 35%;
+  color: white;
+  text-align: center;
+}
+
+.Nav {
+  color: rgb(45,98,163);
+  font-size: 20px; 
+  font-family: monospace;
+}
+
+.Nav:link {
+  text-decoration: none;
+}
+
+.Nav:visited {
+  color:rgb(45,98,163);
+}
+
+.Nav:hover {
+  color: white;
+  background-color: rgb(45,98,163);
+  padding: 10px;
+}
+
+.quantity {
+  display: inline;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.CartItems {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+.CartItem  {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.CartImage {
+  margin-left: 100px;
+}
+
+a:hover {
+  color: white;
+}
+
+.CheckOut {
+  width: 150px;
+  margin-left: 100px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.ListGroup {
+  margin: 50px 100px;
+}
+
+.Lite {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.Contiue {
+  margin-left: 100px;
+}
+
+.slide {
+  width: 1000px;
+  align-items: center;
+  margin: auto;
+}
+
+.each-slide > div {
+  display: flex;
+  width: 600px;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
+.bigTitle {
+  color: rgb(45,98,163);
+  font-family: monospace;
+  display: flex;
+  margin-left: 30%;
+}
+
+.aboutDes {
+  width: 800px;
+  text-align: center;
+  display: flex;
+  margin: auto;
+}
+
+.aboutImg {
+  width: 600px;
+  height: auto;
+  display: flex;
+  margin: auto;
+}
