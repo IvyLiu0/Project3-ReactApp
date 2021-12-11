@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { ListGroup, ListGroupItem } from "reactstrap";
+import { ListGroup, ListGroupItem, Button } from "reactstrap";
+import {Link} from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,9 +17,22 @@ export const Items = (props) => {
 
   return (
     <ListGroup className="ListGroup">
+      <React.Fragment>
+        <label className="sort">
+          Sort Price By: {" \xa0\xa0 "} 
+      <select
+        onChange={(e) => props.sortprice(props.itemList, e.target.value)}
+        >
+        <option value="normal" >Normal</option>
+        <option value="lowest" >Lowest</option>
+        <option value="highest">Highest</option>
+      </select>
+      </label>
+    </React.Fragment>
+    <br /><br />
       {props.itemList.map((product) => (
         <ListGroupItem key={product.id}>
-            <h5 className="Desc">{product.desc}</h5>
+            <h5 className="Desc">{product.desc} {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "} <span className="price">${product.price}</span></h5>
             <img
               src={product.image}
               alt={product.desc}
@@ -39,6 +53,7 @@ export const Items = (props) => {
             quantity
         </ListGroupItem>
       ))}
+      <Button variant="dark"> <Link to="/allproducts" className="productButton">Back to All Products</Link></Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{showImage.desc}</Modal.Title>
@@ -56,5 +71,6 @@ export const Items = (props) => {
         </Modal.Body>
       </Modal>
     </ListGroup>
+    
   );
 };

@@ -3,8 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import 'react-slideshow-image/dist/styles.css'
 
-const aboutImages = [
-    '/products/aboutImg.jpg',
+const contactImages = [
+    '/products/contact.jpg',
   ];
 
 const Contact = () => {
@@ -38,10 +38,12 @@ const Contact = () => {
         <React.Fragment>
             <br /><br /><br />
                 <div>
-                    <img className="aboutImg" src={aboutImages} alt="aboutImages"></img>
+                    <img className="contactImg" src={contactImages} alt="contactImages"></img>
                 </div>
-                <div>
-                    <form onSubmit={handleSubmit} className="mt-3 mb-5 p-3 bg-white">
+                <div className="contactForm">
+                    <form onSubmit={handleSubmit} className="mt-3 mb-5 p-3 bg-white contactForm">
+                        <div> 
+                        <h3 className="formTitle">Contact Us</h3>
                         <label className="m-2">Name:</label><br />
                         <input required onChange={nameUpdate} type="text" name="name" placeholder="Your name"></input><br />
                         <label className="m-2">Email:</label><br />
@@ -49,6 +51,7 @@ const Contact = () => {
                         <label className="m-2">Message:</label><br />
                         <textarea required onChange={messageUpdate} type="text" name="message" placeholder="Leave your message here..." /><br /><br />
                         <button type="submit">submit</button>
+                        </div>
                     </form>
                 </div>
         </React.Fragment>

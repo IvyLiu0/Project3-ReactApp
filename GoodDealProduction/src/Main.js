@@ -4,18 +4,19 @@ import "./App.css";
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image';
 import Columns from "react-columns";
+import {Link} from "react-router-dom"
 
 const slideImages = [
-  '/products/cologne.jpg',
-  '/products/iwatch.jpg',
-  '/products/mug.jpg'
+  '/products/3.jpg',
+  '/products/2.jpg',
+  '/products/1.jpg'
 ];
 
 const Main = () => {
     return (
         <React.Fragment>
       <div>
-          <br /><br /><br />
+          <br /><br />
         <Slide easing="ease" className="slide">
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
@@ -45,11 +46,11 @@ function ShowProducts(){
     <React.Fragment>
     <br /><br /><br />
   <Columns columns="4">
-    <img style={{width:"300px"}} src="/products/cologne.jpg" alt="a" />
-    <img style={{width:"300px"}} src="/products/cologne.jpg" alt="b" />
-    <img style={{width:"300px"}} src="/products/cologne.jpg" alt="c" />
-    <img style={{width:"300px"}} src="/products/cologne.jpg" alt="" />
-    <p style={{marginLeft:"120px"}}>Dinnerware</p>
+    <Link to="/allproducts" className="linkproduct"><img style={{width:"300px", marginLeft:"30px"}} src="/products/8.jpg" alt="a" /></Link>
+    <Link to="/allproducts" className="linkproduct"><img style={{width:"300px"}} src="/products/12.jpg" alt="b" /> </Link>
+    <Link to="/allproducts" className="linkproduct"><img style={{width:"300px"}} src="/products/15.jpg" alt="c" /></Link>
+    <Link to="/allproducts" className="linkproduct"><img style={{width:"300px"}} src="/products/4.jpg" alt="" /></Link>
+    <p style={{marginLeft:"140px"}}>Dinnerware</p>
     <p style={{marginLeft:"120px"}}>Cookware</p>
     <p style={{marginLeft:"120px"}}>Flatware</p>
     <p style={{marginLeft:"120px"}}>Gift Set</p>

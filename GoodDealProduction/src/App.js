@@ -25,6 +25,22 @@ class App extends Component {
     }
   };
 
+  sortprice = (items, sortType) => {
+    items.sort((a, b) => {
+      switch (sortType) {
+        case "normal":
+          return a.id - b.id;
+        case "lowest":
+          return a.price - b.price;
+        case "highest":
+          return b.price - a.price;
+        default:
+          return a.id - b.id ;
+      }
+    });
+    this.setState({ sortType });
+  };
+
   render() {
     return (
       <div>
@@ -32,6 +48,7 @@ class App extends Component {
           itemList={this.state.items}
           handleIncrease={this.handleIncrease}
           handleDecrease={this.handleDecrease}
+          sortprice={this.sortprice}
         />
         <Footer />
       </div>

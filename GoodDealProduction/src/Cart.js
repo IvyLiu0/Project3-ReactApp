@@ -36,7 +36,7 @@ export const Cart = (props) => {
                 ))}
             </ListGroup><br />
             <Link to="/signin">
-                <Button className="btn btn-primary" className="CheckOut">          
+                <Button className="btn" variant="dark" className="CheckOut">          
                   Check Out
                 </Button>
             </Link>

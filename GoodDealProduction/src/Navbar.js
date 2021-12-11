@@ -8,6 +8,7 @@ import Login from "./Login";
 import Main from "./Main";
 import About from "./About";
 import Contact from "./Contact";
+import AllProducts from "./AllProducts";
 
 export const NavBar = (props) => {
   return (
@@ -30,11 +31,11 @@ export const NavBar = (props) => {
               items
           </div>
         </div>
-        <br />
+        <br /><br />
         <div className="NavBox">
         <nav className="NavBar">
           <Link to="/" className="Nav">Home</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
-          <Link to="/product" className="Nav">Products</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
+          <Link to="/allproducts" className="Nav">Products</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
           <Link to="/about" className="Nav">About</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
           <Link to="/contact" className="Nav">Contact</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
           <Link to="/signin" className="Nav">Login</Link>
@@ -44,11 +45,13 @@ export const NavBar = (props) => {
         <Routes>
           <React.Fragment>
             <Route path="/" element={<Main />} />
+            <Route path="/allproducts" element={<AllProducts />} />
              <Route exact path="/product" 
               element={<Home
               itemList={props.itemList}
               handleIncrease={props.handleIncrease}
               handleDecrease={props.handleDecrease}
+              sortprice={props.sortprice}
             />} />
           <Route path="/Cart" element={<Cart itemList={props.itemList} totalvalue={props.totalvalue} />} />
           <Route path="/about" element={<About />} />

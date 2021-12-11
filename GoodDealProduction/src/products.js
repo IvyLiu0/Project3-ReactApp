@@ -1,31 +1,36 @@
 export const CartItems = [
     {
       id: 1,
-      desc: "Unisex Cologne",
-      image: "/products/cologne.jpg",
+      desc: "Dutch Oven",
+      image: "/products/8.jpg",
+      price: 35,
       value: 0,
       rating: 5
     },
     {
       id: 2,
-      desc: "Apple iWatch",
-      image: "/products/iwatch.jpg",
+      desc: "Sauce Pan",
+      image: "/products/9.jpg",
+      price: 15,
       value: 0,
       rating: 4.5
     },
     {
       id: 3,
-      desc: "Unique Mug",
-      image: "/products/mug.jpg",
+      desc: "Griddle",
+      image: "/products/10.jpg",
+      price: 25,
       value: 0,
       rating: 3
     },
     {
       id: 4,
-      desc: "Men's wallet",
-      image: "/products/wallet.jpg",
+      desc: "Fry Pan",
+      image: "/products/11.jpg",
+      price: 20,
       value: 0,
       rating: 4
     },
+    
   ];
   
