@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import "./css/App.css";
 import 'react-slideshow-image/dist/styles.css'
 
 const contactImages = [
@@ -49,7 +49,7 @@ const Contact = () => {
                         <label className="m-2">Email:</label><br />
                         <input required onChange={emailUpdate}  type="email" name="email" placeholder="Your Email"></input><br />
                         <label className="m-2">Message:</label><br />
-                        <textarea required onChange={messageUpdate} type="text" name="message" placeholder="Leave your message here..." /><br /><br />
+                        <textarea required onChange={messageUpdate} type="text" name="message" placeholder="Enter your message here..." /><br /><br />
                         <button type="submit">submit</button>
                         </div>
                     </form>

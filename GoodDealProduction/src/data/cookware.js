@@ -1,9 +1,9 @@
-export const CartItems = [
+export const Cookware = [
     {
       id: 1,
       desc: "Dutch Oven",
       image: "/products/8.jpg",
-      price: 35,
+      price: 7,
       value: 0,
       rating: 5
     },
@@ -11,7 +11,7 @@ export const CartItems = [
       id: 2,
       desc: "Sauce Pan",
       image: "/products/9.jpg",
-      price: 15,
+      price: 18,
       value: 0,
       rating: 4.5
     },
@@ -19,7 +19,7 @@ export const CartItems = [
       id: 3,
       desc: "Griddle",
       image: "/products/10.jpg",
-      price: 25,
+      price: 10,
       value: 0,
       rating: 3
     },

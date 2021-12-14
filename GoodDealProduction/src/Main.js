@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import "./css/App.css";
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image';
 import Columns from "react-columns";
@@ -49,7 +49,7 @@ function ShowProducts(){
     <Link to="/allproducts" className="linkproduct"><img style={{width:"300px", marginLeft:"30px"}} src="/products/8.jpg" alt="a" /></Link>
     <Link to="/allproducts" className="linkproduct"><img style={{width:"300px"}} src="/products/12.jpg" alt="b" /> </Link>
     <Link to="/allproducts" className="linkproduct"><img style={{width:"300px"}} src="/products/15.jpg" alt="c" /></Link>
-    <Link to="/allproducts" className="linkproduct"><img style={{width:"300px"}} src="/products/4.jpg" alt="" /></Link>
+    <Link to="/allproducts" className="linkproduct"><img style={{width:"300px"}} src="/products/4.jpg" alt="d" /></Link>
     <p style={{marginLeft:"140px"}}>Dinnerware</p>
     <p style={{marginLeft:"120px"}}>Cookware</p>
     <p style={{marginLeft:"120px"}}>Flatware</p>

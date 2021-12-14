@@ -56,7 +56,7 @@ export const Items = (props) => {
       <Button variant="dark"> <Link to="/allproducts" className="productButton">Back to All Products</Link></Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{showImage.desc}</Modal.Title>
+          <Modal.Title>{showImage.desc}<span className="price">${showImage.price}</span></Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <img

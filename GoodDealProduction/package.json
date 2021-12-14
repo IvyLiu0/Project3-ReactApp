@@ -26,7 +26,9 @@
     "start": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "scss": "node-sass -o css/ css/",
+    "lite": "lite-server"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +47,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "parallelshell": "^3.0.1"
   }
 }

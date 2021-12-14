@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import "./css/App.css";
 import 'react-slideshow-image/dist/styles.css';
 import {Card, Button, CardGroup} from "react-bootstrap";
 import {Link} from "react-router-dom"

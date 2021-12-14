@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import { CartItems } from "./products";
+import "./css/App.css";
+import { Dinnerware } from "./data/dinnerware";
+import {Cookware} from "./data/cookware";
+import {Flatware} from "./data/flatware";
+import {Giftset} from "./data/giftset";
 import { NavBar } from "./Navbar";
 import { Footer } from "./Footer";
 
@@ -9,7 +12,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: CartItems
+      items: Cookware,
+      items1: Dinnerware,
+      items2: Flatware,
+      items3: Giftset
     };
   }
 
@@ -40,6 +46,55 @@ class App extends Component {
     });
     this.setState({ sortType });
   };
+
+  sortprice = (items1, sortType) => {
+    items1.sort((a, b) => {
+      switch (sortType) {
+        case "normal":
+          return a.id - b.id;
+        case "lowest":
+          return a.price - b.price;
+        case "highest":
+          return b.price - a.price;
+        default:
+          return a.id - b.id ;
+      }
+    });
+    this.setState({ sortType });
+  };
+
+  sortprice = (items2, sortType) => {
+    items2.sort((a, b) => {
+      switch (sortType) {
+        case "normal":
+          return a.id - b.id;
+        case "lowest":
+          return a.price - b.price;
+        case "highest":
+          return b.price - a.price;
+        default:
+          return a.id - b.id ;
+      }
+    });
+    this.setState({ sortType });
+  };
+
+  sortprice = (items3, sortType) => {
+    items3.sort((a, b) => {
+      switch (sortType) {
+        case "normal":
+          return a.id - b.id;
+        case "lowest":
+          return a.price - b.price;
+        case "highest":
+          return b.price - a.price;
+        default:
+          return a.id - b.id ;
+      }
+    });
+    this.setState({ sortType });
+  };
+
 
   render() {
     return (

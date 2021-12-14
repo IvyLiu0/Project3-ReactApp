@@ -2,7 +2,7 @@ import React, { useState }from 'react';
 import FacebookLogin from 'react-facebook-login';
 import { Card } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
+import "./css/App.css";
 
 function Login () {
   const [login, setLogin] = useState(false); //set up login
