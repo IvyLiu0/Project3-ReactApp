@@ -50,8 +50,8 @@ function ShowProducts(){
     <Link to="/allproducts" className="linkproduct"><img style={{width:"300px"}} src="/products/12.jpg" alt="b" /> </Link>
     <Link to="/allproducts" className="linkproduct"><img style={{width:"300px"}} src="/products/15.jpg" alt="c" /></Link>
     <Link to="/allproducts" className="linkproduct"><img style={{width:"300px"}} src="/products/4.jpg" alt="d" /></Link>
-    <p style={{marginLeft:"140px"}}>Dinnerware</p>
-    <p style={{marginLeft:"120px"}}>Cookware</p>
+    <p style={{marginLeft:"140px"}}>Cookware</p>
+    <p style={{marginLeft:"120px"}}>Dinnerware</p>
     <p style={{marginLeft:"120px"}}>Flatware</p>
     <p style={{marginLeft:"120px"}}>Gift Set</p>
   </Columns>
