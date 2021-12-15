@@ -53,6 +53,27 @@ export const NavBar = (props) => {
               handleDecrease={props.handleDecrease}
               sortprice={props.sortprice}
             />} />
+            {/* <Route exact path="/product1" 
+              element={<Home
+              itemList1={props.itemList1}
+              handleIncrease={props.handleIncrease}
+              handleDecrease={props.handleDecrease}
+              sortprice={props.sortprice}
+            />} />
+            <Route exact path="/product2" 
+              element={<Home
+              itemList2={props.itemList2}
+              handleIncrease={props.handleIncrease}
+              handleDecrease={props.handleDecrease}
+              sortprice={props.sortprice}
+            />} />
+            <Route exact path="/product3" 
+              element={<Home
+              itemList3={props.itemList3}
+              handleIncrease={props.handleIncrease}
+              handleDecrease={props.handleDecrease}
+              sortprice={props.sortprice}
+            />} /> */}
           <Route path="/Cart" element={<Cart itemList={props.itemList} totalvalue={props.totalvalue} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

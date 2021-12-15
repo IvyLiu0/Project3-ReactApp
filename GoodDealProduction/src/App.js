@@ -14,7 +14,9 @@ class App extends Component {
     super(props);
     this.state = {
       items: Alldata.Cookware,
-      items1: Alldata.Dinnerware
+      items1: Alldata.Dinnerware,
+      items2: Alldata.Flateware,
+      items3: Alldata.Giftset
     };
   }
 
@@ -100,6 +102,9 @@ class App extends Component {
       <div>
         <NavBar
           itemList={this.state.items}
+          // itemList1={this.state.items1}
+          // // itemList2={this.state.items2}
+          // // itemList3={this.state.items3}
           handleIncrease={this.handleIncrease}
           handleDecrease={this.handleDecrease}
           sortprice={this.sortprice}

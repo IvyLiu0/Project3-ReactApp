@@ -29,6 +29,42 @@ export const Items = (props) => {
       </select>
       </label>
     </React.Fragment>
+    {/* <React.Fragment>
+        <label className="sort">
+          Sort Price By: {" \xa0\xa0 "} 
+      <select
+        onChange={(e) => props.sortprice(props.itemList1, e.target.value)}
+        >
+        <option value="normal" >Normal</option>
+        <option value="lowest" >Lowest</option>
+        <option value="highest">Highest</option>
+      </select>
+      </label>
+    </React.Fragment>
+    <React.Fragment>
+        <label className="sort">
+          Sort Price By: {" \xa0\xa0 "} 
+      <select
+        onChange={(e) => props.sortprice(props.itemList2, e.target.value)}
+        >
+        <option value="normal" >Normal</option>
+        <option value="lowest" >Lowest</option>
+        <option value="highest">Highest</option>
+      </select>
+      </label>
+    </React.Fragment>
+    <React.Fragment>
+        <label className="sort">
+          Sort Price By: {" \xa0\xa0 "} 
+      <select
+        onChange={(e) => props.sortprice(props.itemList3, e.target.value)}
+        >
+        <option value="normal" >Normal</option>
+        <option value="lowest" >Lowest</option>
+        <option value="highest">Highest</option>
+      </select>
+      </label>
+    </React.Fragment> */}
     <br /><br />
       {props.itemList.map((product) => (
         <ListGroupItem key={product.id}>
@@ -53,6 +89,75 @@ export const Items = (props) => {
             quantity
         </ListGroupItem>
       ))}
+      {/* {props.itemList1.map((product) => (
+        <ListGroupItem key={product.id}>
+            <h5 className="Desc">{product.desc} {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "} <span className="price">${product.price}</span></h5>
+            <img
+              src={product.image}
+              alt={product.desc}
+              height="200"
+              width="200"
+              onClick={() => handleShow(product)}
+            />
+            {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
+            <button onClick={() => props.handleIncrease(product)}>
+              <FontAwesomeIcon icon={faPlusCircle} />
+            </button>
+            {" \xa0 "}
+            <button onClick={() => props.handleDecrease(product)}>
+              <FontAwesomeIcon icon={faMinusCircle} />
+            </button>
+            {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
+            <span>{product.value}</span>
+            quantity
+        </ListGroupItem>
+      ))}
+      {props.itemList2.map((product) => (
+        <ListGroupItem key={product.id}>
+            <h5 className="Desc">{product.desc} {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "} <span className="price">${product.price}</span></h5>
+            <img
+              src={product.image}
+              alt={product.desc}
+              height="200"
+              width="200"
+              onClick={() => handleShow(product)}
+            />
+            {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
+            <button onClick={() => props.handleIncrease(product)}>
+              <FontAwesomeIcon icon={faPlusCircle} />
+            </button>
+            {" \xa0 "}
+            <button onClick={() => props.handleDecrease(product)}>
+              <FontAwesomeIcon icon={faMinusCircle} />
+            </button>
+            {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
+            <span>{product.value}</span>
+            quantity
+        </ListGroupItem>
+      ))}
+      {props.itemList3.map((product) => (
+        <ListGroupItem key={product.id}>
+            <h5 className="Desc">{product.desc} {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "} <span className="price">${product.price}</span></h5>
+            <img
+              src={product.image}
+              alt={product.desc}
+              height="200"
+              width="200"
+              onClick={() => handleShow(product)}
+            />
+            {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
+            <button onClick={() => props.handleIncrease(product)}>
+              <FontAwesomeIcon icon={faPlusCircle} />
+            </button>
+            {" \xa0 "}
+            <button onClick={() => props.handleDecrease(product)}>
+              <FontAwesomeIcon icon={faMinusCircle} />
+            </button>
+            {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
+            <span>{product.value}</span>
+            quantity
+        </ListGroupItem>
+      ))} */}
       <Button variant="dark"> <Link to="/allproducts" className="productButton">Back to All Products</Link></Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -71,6 +176,7 @@ export const Items = (props) => {
         </Modal.Body>
       </Modal>
     </ListGroup>
+    
     
   );
 };

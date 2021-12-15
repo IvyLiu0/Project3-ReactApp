@@ -5,7 +5,7 @@ const cors = require('cors');
 
 app.use(cors())
 app.use(bodyParser.json())
-require('./app/models/inventory.model.js');
+require('./app/models/contact.model.js');
 
 //configuring the database
 require('dotenv').config();
@@ -25,7 +25,7 @@ mongoose.connection
     console.log(`Connection error: ${err.message}`);
 })
 
-require('./app/routes/inventory.router.js')(app);
+require('./app/routes/contact.router.js')(app);
 
 //create a server
 const server = app.listen(8080, function(){

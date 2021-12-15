@@ -7,6 +7,9 @@ export const Home = (props) => {
     <div>
       <Items
         itemList={props.itemList}
+        // itemList1={props.itemList1}
+        // itemList2={props.itemList2}
+        // itemList3={props.itemList3}
         handleIncrease={props.handleIncrease}
         handleDecrease={props.handleDecrease}
         sortprice={props.sortprice}
