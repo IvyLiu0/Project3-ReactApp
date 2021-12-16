@@ -1,6 +1,6 @@
 export const Cookware = [
     {
-      id: 1,
+      id: 0,
       desc: "Dutch Oven",
       image: "/products/8.jpg",
       price: 7,
@@ -8,7 +8,7 @@ export const Cookware = [
       rating: 5
     },
     {
-      id: 2,
+      id: 1,
       desc: "Sauce Pan",
       image: "/products/9.jpg",
       price: 18,
@@ -16,7 +16,7 @@ export const Cookware = [
       rating: 4.5
     },
     {
-      id: 3,
+      id: 2,
       desc: "Griddle",
       image: "/products/10.jpg",
       price: 10,
@@ -24,7 +24,7 @@ export const Cookware = [
       rating: 3
     },
     {
-      id: 4,
+      id: 3,
       desc: "Fry Pan",
       image: "/products/11.jpg",
       price: 20,

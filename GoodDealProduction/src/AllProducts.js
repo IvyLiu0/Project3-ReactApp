@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/App.css";
 import 'react-slideshow-image/dist/styles.css';
-import { Dinnerware } from "./data/dinnerware";
-import {Cookware} from "./data/cookware";
-import {Flatware} from "./data/flatware";
-import {Giftset} from "./data/giftset";
+// import { Dinnerware } from "./data/dinnerware";
+// import {Cookware} from "./data/cookware";
+// import {Flatware} from "./data/flatware";
+// import {Giftset} from "./data/giftset";
 import {Card, Button, CardGroup} from "react-bootstrap";
 import {Link} from "react-router-dom"
 // import { Alldata } from "./data/alldata";
@@ -17,16 +17,9 @@ const productImages = [
     '/products/4.jpg'
   ];
 
-  class AllProducts extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        items: Cookware,
-        items1: Dinnerware,
-        items2: Flatware,
-        items3: Giftset
-      };
-    }
+ export const AllProducts = () => {
+    
+    
    
         // <Row xs={1} md={2} className="g-4">
         //     {Array.from({ length: 4 }).map((_, idx) => (
@@ -46,7 +39,7 @@ const productImages = [
         // </Row>
         
 
-render() {
+
     return (
         <React.Fragment>
         <br /><br />
@@ -57,14 +50,14 @@ render() {
                 <Card.Body>
                 <Card.Title>Cookware</Card.Title>
                 </Card.Body>
-                <Button variant="dark"><Link to="/product" className="productButton">Products</Link></Button>
+                <Button variant="dark"><Link to="/cookware" className="productButton">Products</Link></Button>
             </Card>
             <Card style={{marginLeft:"20px", marginBottom:"20px"}} className="Card">
                 <Card.Img variant="top" src={productImages[1]} />
                 <Card.Body>
                 <Card.Title>Dinnerware</Card.Title>
                 </Card.Body>
-                <Button variant="dark" ><Link to="/product1" className="productButton">Products</Link></Button>
+                <Button variant="dark" ><Link to="/dinnerware" className="productButton">Products</Link></Button>
             </Card>
         </CardGroup>
 
@@ -74,20 +67,18 @@ render() {
                 <Card.Body>
                 <Card.Title>Flateware</Card.Title>
                 </Card.Body>
-                <Button variant="dark" ><Link to="/product2" className="productButton">Products</Link></Button>
+                <Button variant="dark" ><Link to="/flatware" className="productButton">Products</Link></Button>
             </Card >
             <Card style={{marginLeft:"20px"}} className="Card">
                 <Card.Img variant="top" src={productImages[3]} />
                 <Card.Body>
                 <Card.Title>Gift Set</Card.Title>
                 </Card.Body>
-                <Button variant="dark" ><Link to="/product3" className="productButton">Products</Link></Button>
+                <Button variant="dark" ><Link to="/giftset" className="productButton">Products</Link></Button>
             </Card>
             </CardGroup>
         </div>
     </React.Fragment>
     );
   }
-}
 
-export default AllProducts;

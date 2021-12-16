@@ -13,10 +13,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: Cookware,
-      items1: Dinnerware,
-      items2: Flatware,
-      items3: Giftset
+      cookware: Cookware,
+      dinnerware: Dinnerware,
+      flatware: Flatware,
+      giftset: Giftset
     };
   }
 
@@ -32,8 +32,8 @@ class App extends Component {
     }
   };
 
-  sortprice = (items, sortType) => {
-    items.sort((a, b) => {
+  sortprice = (cookware, sortType) => {
+    cookware.sort((a, b) => {
       switch (sortType) {
         case "normal":
           return a.id - b.id;
@@ -48,8 +48,8 @@ class App extends Component {
     this.setState({ sortType });
   };
 
-  sortprice = (items1, sortType) => {
-    items1.sort((a, b) => {
+  sortprice1 = (dinnerware, sortType) => {
+    dinnerware.sort((a, b) => {
       switch (sortType) {
         case "normal":
           return a.id - b.id;
@@ -64,8 +64,8 @@ class App extends Component {
     this.setState({ sortType });
   };
 
-  sortprice = (items2, sortType) => {
-    items2.sort((a, b) => {
+  sortprice2 = (flatware, sortType) => {
+    flatware.sort((a, b) => {
       switch (sortType) {
         case "normal":
           return a.id - b.id;
@@ -80,8 +80,8 @@ class App extends Component {
     this.setState({ sortType });
   };
 
-  sortprice = (items3, sortType) => {
-    items3.sort((a, b) => {
+  sortprice3 = (giftset, sortType) => {
+    giftset.sort((a, b) => {
       switch (sortType) {
         case "normal":
           return a.id - b.id;
@@ -101,13 +101,16 @@ class App extends Component {
     return (
       <div>
         <NavBar
-          itemList={this.state.items}
-          itemList1={this.state.items1}
-          itemList2={this.state.items2}
-          itemList3={this.state.items3}
+          cookList={this.state.cookware}
+          dinnerList={this.state.dinnerware}
+          flatList={this.state.flatware}
+          giftList={this.state.giftset}
           handleIncrease={this.handleIncrease}
           handleDecrease={this.handleDecrease}
           sortprice={this.sortprice}
+          sortprice1={this.sortprice1}
+          sortprice2={this.sortprice2}
+          sortprice3={this.sortprice3}
         />
         <Footer />
       </div>

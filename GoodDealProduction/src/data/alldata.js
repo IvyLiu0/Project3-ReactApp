@@ -36,7 +36,7 @@ export const Alldata = {
 
 Dinnerware: [
     {
-        id: 1,
+        id: 5,
         desc: "Bowl",
         image: "/products/12.jpg",
         price: 35,
@@ -44,7 +44,7 @@ Dinnerware: [
         rating: 5
       },
       {
-        id: 2,
+        id: 6,
         desc: "Cup",
         image: "/products/13.jpg",
         price: 15,
@@ -52,7 +52,7 @@ Dinnerware: [
         rating: 4.5
       },
       {
-        id: 3,
+        id: 7,
         desc: "Plate",
         image: "/products/14.jpg",
         price: 25,
@@ -60,7 +60,7 @@ Dinnerware: [
         rating: 3
       },
       {
-        id: 4,
+        id: 8,
         desc: "4pc Set",
         image: "/products/19.jpg",
         price: 20,
@@ -69,9 +69,9 @@ Dinnerware: [
       },
 ],
 
-Flateware:[
+Flatware:[
     {
-        id: 1,
+        id: 9,
         desc: "Stainless Steel Flatware",
         image: "/products/15.jpg",
         price: 35,
@@ -79,7 +79,7 @@ Flateware:[
         rating: 5
       },
       {
-        id: 2,
+        id: 10,
         desc: "Spatulas & Spoons",
         image: "/products/16.jpg",
         price: 15,
@@ -87,7 +87,7 @@ Flateware:[
         rating: 4.5
       },
       {
-        id: 3,
+        id: 11,
         desc: "Colorful Flatware",
         image: "/products/17.jpg",
         price: 25,
@@ -98,7 +98,7 @@ Flateware:[
 
 Giftset:[
     {
-        id: 1,
+        id: 12,
         desc: "12pc Cookware Set",
         image: "/products/4.jpg",
         price: 65,
@@ -106,7 +106,7 @@ Giftset:[
         rating: 5
       },
       {
-        id: 2,
+        id: 13,
         desc: "12pc Cookware Set",
         image: "/products/5.jpg",
         price: 70,
@@ -114,7 +114,7 @@ Giftset:[
         rating: 4.5
       },
       {
-        id: 3,
+        id: 14,
         desc: "7pc Cookware Set",
         image: "/products/6.jpg",
         price: 50,
@@ -122,7 +122,7 @@ Giftset:[
         rating: 3
       },
       {
-        id: 4,
+        id: 15,
         desc: "20pc Dinnerware Set",
         image: "/products/20.jpg",
         price: 35,

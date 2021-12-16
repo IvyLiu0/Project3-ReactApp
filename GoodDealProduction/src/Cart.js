@@ -7,8 +7,8 @@ import React from "react";
 
 
 export const Cart = (props) => {
-
-  const totalvalue = props.itemList
+  
+  const totalvalue = props.cookList
   .map((item) => item.value)
   .reduce((acc, curr) => acc + curr, 0)
 
@@ -18,7 +18,7 @@ export const Cart = (props) => {
       {totalvalue > 0 &&
         <div>
             <ListGroup className="Lite">
-                {props.itemList.filter((itemlist) => itemlist.value>0).map((itemlist) => (
+                {props.cookList.filter((itemlist) => itemlist.value>0).map((itemlist) => (
                 <ListGroupItem key={itemlist.id}>
                 <div>
                   <img className="CartImage"

@@ -1,6 +1,6 @@
 export const Giftset = [
     {
-      id: 1,
+      id: 0,
       desc: "12pc Cookware Set",
       image: "/products/4.jpg",
       price: 65,
@@ -8,7 +8,7 @@ export const Giftset = [
       rating: 5
     },
     {
-      id: 2,
+      id: 1,
       desc: "12pc Cookware Set",
       image: "/products/5.jpg",
       price: 70,
@@ -16,7 +16,7 @@ export const Giftset = [
       rating: 4.5
     },
     {
-      id: 3,
+      id: 2,
       desc: "7pc Cookware Set",
       image: "/products/6.jpg",
       price: 50,
@@ -24,7 +24,7 @@ export const Giftset = [
       rating: 3
     },
     {
-      id: 4,
+      id: 3,
       desc: "20pc Dinnerware Set",
       image: "/products/20.jpg",
       price: 35,

@@ -5,7 +5,7 @@ import { Modal } from "react-bootstrap";
 import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const Items1 = (props) => {
+export const DinnerItems = (props) => {
   const [show, setShow] = useState(false);
   const [showImage, setShowImage] = useState({});
 
@@ -21,7 +21,7 @@ export const Items1 = (props) => {
         <label className="sort">
           Sort Price By: {" \xa0\xa0 "} 
       <select
-        onChange={(e) => props.sortprice(props.itemList1, e.target.value)}
+        onChange={(e) => props.sortprice1(props.dinnerList, e.target.value)}
         >
         <option value="normal" >Normal</option>
         <option value="lowest" >Lowest</option>
@@ -31,7 +31,7 @@ export const Items1 = (props) => {
     </React.Fragment>
     
     <br /><br />
-      {props.itemList1.map((product1) => (
+      {props.dinnerList.map((product1) => (
         <ListGroupItem key={product1.id}>
             <h5 className="Desc">{product1.desc} {" \xa0\xa0\xa0\xa0\xa0\xa0\xa0 "} <span className="price">${product1.price}</span></h5>
             <img
