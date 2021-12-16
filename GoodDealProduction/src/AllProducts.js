@@ -2,9 +2,13 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/App.css";
 import 'react-slideshow-image/dist/styles.css';
+import { Dinnerware } from "./data/dinnerware";
+import {Cookware} from "./data/cookware";
+import {Flatware} from "./data/flatware";
+import {Giftset} from "./data/giftset";
 import {Card, Button, CardGroup} from "react-bootstrap";
 import {Link} from "react-router-dom"
-import { Alldata } from "./data/alldata";
+// import { Alldata } from "./data/alldata";
 
 const productImages = [
     '/products/8.jpg',
@@ -17,10 +21,10 @@ const productImages = [
     constructor(props) {
       super(props);
       this.state = {
-        items: Alldata.Cookware,
-        items1: Alldata.Dinnerware,
-        items2: Alldata.Flateware,
-        items3: Alldata.Giftset
+        items: Cookware,
+        items1: Dinnerware,
+        items2: Flatware,
+        items3: Giftset
       };
     }
    
@@ -53,14 +57,14 @@ render() {
                 <Card.Body>
                 <Card.Title>Cookware</Card.Title>
                 </Card.Body>
-                <Button variant="dark" onClick={this.items}><Link to="/product" className="productButton">Products</Link></Button>
+                <Button variant="dark"><Link to="/product" className="productButton">Products</Link></Button>
             </Card>
             <Card style={{marginLeft:"20px", marginBottom:"20px"}} className="Card">
                 <Card.Img variant="top" src={productImages[1]} />
                 <Card.Body>
                 <Card.Title>Dinnerware</Card.Title>
                 </Card.Body>
-                <Button variant="dark" onClick={this.items1}><Link to="/product1" className="productButton">Products</Link></Button>
+                <Button variant="dark" ><Link to="/product1" className="productButton">Products</Link></Button>
             </Card>
         </CardGroup>
 
@@ -70,14 +74,14 @@ render() {
                 <Card.Body>
                 <Card.Title>Flateware</Card.Title>
                 </Card.Body>
-                <Button variant="dark" onClick={this.items2}><Link to="/product2" className="productButton">Products</Link></Button>
+                <Button variant="dark" ><Link to="/product2" className="productButton">Products</Link></Button>
             </Card >
             <Card style={{marginLeft:"20px"}} className="Card">
                 <Card.Img variant="top" src={productImages[3]} />
                 <Card.Body>
                 <Card.Title>Gift Set</Card.Title>
                 </Card.Body>
-                <Button variant="dark" onClick={this.items3}><Link to="/product3" className="productButton">Products</Link></Button>
+                <Button variant="dark" ><Link to="/product3" className="productButton">Products</Link></Button>
             </Card>
             </CardGroup>
         </div>

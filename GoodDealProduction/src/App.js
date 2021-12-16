@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/App.css";
-// import { Dinnerware } from "./data/dinnerware";
-// import {Cookware} from "./data/cookware";
-// import {Flatware} from "./data/flatware";
-// import {Giftset} from "./data/giftset";
-import { Alldata } from "./data/alldata";
+import { Dinnerware } from "./data/dinnerware";
+import {Cookware} from "./data/cookware";
+import {Flatware} from "./data/flatware";
+import {Giftset} from "./data/giftset";
+// import { Alldata } from "./data/alldata";
 import { NavBar } from "./Navbar";
 import { Footer } from "./Footer";
 
@@ -13,10 +13,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: Alldata.Cookware,
-      items1: Alldata.Dinnerware,
-      items2: Alldata.Flateware,
-      items3: Alldata.Giftset
+      items: Cookware,
+      items1: Dinnerware,
+      items2: Flatware,
+      items3: Giftset
     };
   }
 
@@ -48,53 +48,53 @@ class App extends Component {
     this.setState({ sortType });
   };
 
-  // sortprice = (items1, sortType) => {
-  //   items1.sort((a, b) => {
-  //     switch (sortType) {
-  //       case "normal":
-  //         return a.id - b.id;
-  //       case "lowest":
-  //         return a.price - b.price;
-  //       case "highest":
-  //         return b.price - a.price;
-  //       default:
-  //         return a.id - b.id ;
-  //     }
-  //   });
-  //   this.setState({ sortType });
-  // };
+  sortprice = (items1, sortType) => {
+    items1.sort((a, b) => {
+      switch (sortType) {
+        case "normal":
+          return a.id - b.id;
+        case "lowest":
+          return a.price - b.price;
+        case "highest":
+          return b.price - a.price;
+        default:
+          return a.id - b.id ;
+      }
+    });
+    this.setState({ sortType });
+  };
 
-  // sortprice = (items2, sortType) => {
-  //   items2.sort((a, b) => {
-  //     switch (sortType) {
-  //       case "normal":
-  //         return a.id - b.id;
-  //       case "lowest":
-  //         return a.price - b.price;
-  //       case "highest":
-  //         return b.price - a.price;
-  //       default:
-  //         return a.id - b.id ;
-  //     }
-  //   });
-  //   this.setState({ sortType });
-  // };
+  sortprice = (items2, sortType) => {
+    items2.sort((a, b) => {
+      switch (sortType) {
+        case "normal":
+          return a.id - b.id;
+        case "lowest":
+          return a.price - b.price;
+        case "highest":
+          return b.price - a.price;
+        default:
+          return a.id - b.id ;
+      }
+    });
+    this.setState({ sortType });
+  };
 
-  // sortprice = (items3, sortType) => {
-  //   items3.sort((a, b) => {
-  //     switch (sortType) {
-  //       case "normal":
-  //         return a.id - b.id;
-  //       case "lowest":
-  //         return a.price - b.price;
-  //       case "highest":
-  //         return b.price - a.price;
-  //       default:
-  //         return a.id - b.id ;
-  //     }
-  //   });
-  //   this.setState({ sortType });
-  // };
+  sortprice = (items3, sortType) => {
+    items3.sort((a, b) => {
+      switch (sortType) {
+        case "normal":
+          return a.id - b.id;
+        case "lowest":
+          return a.price - b.price;
+        case "highest":
+          return b.price - a.price;
+        default:
+          return a.id - b.id ;
+      }
+    });
+    this.setState({ sortType });
+  };
 
 
   render() {
@@ -102,9 +102,9 @@ class App extends Component {
       <div>
         <NavBar
           itemList={this.state.items}
-          // itemList1={this.state.items1}
-          // // itemList2={this.state.items2}
-          // // itemList3={this.state.items3}
+          itemList1={this.state.items1}
+          itemList2={this.state.items2}
+          itemList3={this.state.items3}
           handleIncrease={this.handleIncrease}
           handleDecrease={this.handleDecrease}
           sortprice={this.sortprice}
