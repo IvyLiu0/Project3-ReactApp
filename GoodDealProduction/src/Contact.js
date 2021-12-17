@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/App.css";
-import 'react-slideshow-image/dist/styles.css'
-import Swal from 'sweetalert2'
+import 'react-slideshow-image/dist/styles.css';
+// import Swal from 'sweetalert2'
 
 const contactImages = [
     '/products/contact.jpg',
@@ -31,9 +31,9 @@ const Contact = () => {
             })
         })
         .then(()=>{
-            // alert('We receive your message. We will contact you soon. Thank you!');
+            alert('We receive your message. We will contact you soon. Thank you!');
             
-            Swal.fire('Any fool can use a computer');
+            // Swal.fire('Any fool can use a computer');
             
         })
     }

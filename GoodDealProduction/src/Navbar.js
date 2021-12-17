@@ -77,11 +77,7 @@ export const NavBar = (props) => {
               handleDecrease={props.handleDecrease}
               sortprice3={props.sortprice3}
             />} />
-          <Route path="/Cart" element={<Cart cookList={props.cookList} 
-          dinnerList={props.dinnerList}
-          flatList={props.flatList}
-          giftList={props.giftList}
-          totalvalue={props.totalvalue} />} />
+          <Route path="/Cart" element={<Cart totalList={props.totalList} totalvalue={props.totalvalue} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signin" element= {<Login />}></Route>
