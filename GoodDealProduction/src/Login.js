@@ -50,7 +50,8 @@ function Login() {
                     Fill correct Info else keep trying.
                         </Alert>}
             </form>
-                : <div style={{fontSize:"40px", color:"green"}} >You have logged in successfully!</div>
+                : <div style={{fontSize:"40px", color:"green"}} >You have logged in successfully!<br />
+                <button type="submit" className="btn btn-dark btn-lg bcHome"><a href='./'>Home</a></button></div>
             }
 
         </div>
