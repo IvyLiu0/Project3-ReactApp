@@ -1,100 +1,60 @@
-import React, { useState }from 'react';
-import FacebookLogin from 'react-facebook-login';
-import { Card } from 'react-bootstrap';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/App.css";
+import React, { useState } from 'react'
+import { Alert } from 'react-bootstrap';
+import { AllProducts } from './AllProducts';
 
-function Login () {
-  const [login, setLogin] = useState(false); //set up login
-  const [data, setData] = useState({}); //set up fb data
-  const [picture, setPicture] = useState(''); //set up fb profile image
+function Login() {
 
-  const responseFacebook = (response) => {
-    console.log(response);
-    setData(response);
-    setPicture(response.picture.data.url);
-    if (response.accessToken) {
-      setLogin(true);
-    } else {
-      setLogin(false);
+    const [emaillog, setEmaillog] = useState(" ");
+    const [passwordlog, setPasswordlog] = useState(" ");
+
+    const [flag, setFlag] = useState(false);
+
+    const [home, setHome] = useState(true);
+
+
+    function handleLogin(e) {
+        e.preventDefault();
+        let pass = localStorage.getItem('hardikSubmissionPassword').replace(/"/g, "");
+        let mail = localStorage.getItem('hardikSubmissionEmail').replace(/"/g, "");
+        // .replace(/"/g,"") is used to remove the double quotes for the string
+
+        if (!emaillog || !passwordlog) {
+            setFlag(true);
+            console.log("EMPTY");
+        } else if ((passwordlog !== pass) || (emaillog !== mail)) {
+            setFlag(true);
+        } else {
+            setHome(!home);
+            setFlag(false);
+        }
     }
-  }
 
 
-  return(
-    <div class="container">
-      <Card style={{width:'800px'}} className="mx-auto mt-5">
-          {!login && (
-          <React.Fragment>
-          <Card.Header className="pb-4">
-          <h1>Sign in</h1>
-        </Card.Header>
-        <Card.Body>
-          <Card.Text>
-            {!login &&
-            <React.Fragment>
-            <h3>Please login using one of the following:</h3>
-            {/* Login Form */}
-            <LoginForm />
-            {/* FB Login Button */}
-            <FacebookLogin
-              appId="327218602070543"
-              autoLoad={false}
-              fields="name,email,picture"
-              scope="public_profile,user_friends"
-              callback={responseFacebook}
-              icon="fa-facebook"
-            >
-            </FacebookLogin>
-            </React.Fragment>
-            }
-          </Card.Text>
-        </Card.Body>
-        </React.Fragment>
-        )}
-        
-        {login && (
-            <React.Fragment>
-                  <Card.Header className="pb-4">
-                      <h1>Check Out</h1>
-                  </Card.Header>
-                  <Card.Body>
-                      <Card.Text>
-                          <Checked fbpic={picture} fbdata={data} />
-                      </Card.Text>
-                  </Card.Body>
-              </React.Fragment>
-        )
-                
+    return (
+        <div>
+            {home ? <form onSubmit={handleLogin}>
+                <h3>Log in</h3>
+                <div className="form-group">
+                    <label>Email</label>
+                    <input type="email" className="form-control" placeholder="Enter email" onChange={(event) => setEmaillog(event.target.value)} />
+                </div>
+
+                <div className="form-group">
+                    <label>Password</label>
+                    <input type="password" className="form-control" placeholder="Enter password" onChange={(event) => setPasswordlog(event.target.value)} />
+                </div>
+                <br />
+                <button type="submit" className="btn btn-dark btn-lg login">Login</button><br /><br /><br />
+
+                {flag && <Alert color='primary' variant="warning" >
+                    Fill correct Info else keep trying.
+                        </Alert>}
+            </form>
+                : <div style={{fontSize:"40px", color:"green"}} >You have logged in successfully!</div>
             }
 
-      </Card>
-    </div>
-  )
-}
-
-function LoginForm() {
-  return(
-    <form className="border mt-3 mb-5 p-3 bg-white">
-      <label className="m-2">Name:</label><br />
-      <input type="text" name="name" placeholder="Your name"></input><br />
-      <label className="m-2">Email:</label><br />
-      <input type="email" name="email" placeholder="Your Email"></input><br />
-      <input type="submit" value="Login" className="btn bg-success text-white my-3"></input>
-    </form>
-  )
-}
-
-function Checked({fbpic, fbdata}) {
-  return(
-    <React.Fragment>
-      <img src={fbpic} alt={fbdata.name} />
-      <h3 className="d-inline text-success mx-2">
-        Welcome back {fbdata.name}!
-      </h3>
-      <p className="my-5">Time to check out?</p>
-    </React.Fragment>
-  )
+        </div>
+    )
 }
 
 export default Login;

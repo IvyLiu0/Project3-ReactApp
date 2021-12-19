@@ -7,11 +7,12 @@ import {Homedinner} from "./Homedinner";
 import { Homeflat } from "./Homeflat";
 import { Homegift } from "./Homegift";
 import { Cart } from "./Cart";
-import Login from "./Login";
+import Login from "./RegisterLogin";
 import Main from "./Main";
 import About from "./About";
 import Contact from "./Contact";
 import {AllProducts} from "./AllProducts";
+// import { Alldata } from "./data/alldata";
 
 export const NavBar = (props) => {
   return (
@@ -41,7 +42,7 @@ export const NavBar = (props) => {
           <Link to="/allproducts" className="Nav">Products</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
           <Link to="/about" className="Nav">About</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
           <Link to="/contact" className="Nav">Contact</Link>{" \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 "}
-          <Link to="/signin" className="Nav">Login</Link>
+          <Link to="/signin" className="Nav">Register/Login</Link>
         </nav>
         </div>
 
@@ -77,7 +78,7 @@ export const NavBar = (props) => {
               handleDecrease={props.handleDecrease}
               sortprice3={props.sortprice3}
             />} />
-          <Route path="/Cart" element={<Cart totalList={props.totalList} totalvalue={props.totalvalue} />} />
+          <Route path="/Cart" element={<Cart cookList={props.cookList} totalvalue={props.totalvalue} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signin" element= {<Login />}></Route>

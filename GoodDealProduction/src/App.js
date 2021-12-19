@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/App.css";
-// import { Dinnerware } from "./data/dinnerware";
-// import {Cookware} from "./data/cookware";
-// import {Flatware} from "./data/flatware";
-// import {Giftset} from "./data/giftset";
-import { Alldata } from "./data/alldata";
+import { Dinnerware } from "./data/dinnerware";
+import {Cookware} from "./data/cookware";
+import {Flatware} from "./data/flatware";
+import {Giftset} from "./data/giftset";
+// import { Alldata } from "./data/alldata";
 import { NavBar } from "./Navbar";
 import { Footer } from "./Footer";
 
@@ -13,11 +13,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // cookware: Cookware,
-      // dinnerware: Dinnerware,
-      // flatware: Flatware,
-      // giftset: Giftset,
-      alldata: Alldata
+      cookware: Cookware,
+      dinnerware: Dinnerware,
+      flatware: Flatware,
+      giftset: Giftset
+      // alldata: Alldata
     };
   }
 

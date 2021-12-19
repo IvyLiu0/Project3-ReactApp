@@ -4,16 +4,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
 import React from "react";
-import {Alldata} from "./data/alldata";
+
+
 
 
 export const Cart = (props) => {
-  const cook = props.cookList;
-  const dinner = props.dinnerList;
-  const flat = props.flatList;
-  const gift = props.giftList;
-  const totalList = {...cook, ...dinner, ...flat, ...gift}
-  const totalvalue = totalList.map((item) => item.value).reduce((acc, curr) => acc + curr, 0)
+  // const cook = props.cookList;
+  // const dinner = props.dinnerList;
+  // const flat = props.flatList;
+  // const gift = props.giftList;
+  // const totalList = object.assign(cook, dinner, flat, gift)
+  const totalvalue = props.cookList
+  .map((item) => item.value)
+  .reduce((acc, curr) => acc + curr, 0)
+  
 
   return (
     <div className="Lite">
@@ -21,7 +25,7 @@ export const Cart = (props) => {
       {totalvalue > 0 &&
         <div>
             <ListGroup className="Lite">
-                {totalList.filter((itemlist) => itemlist.value>0).map((itemlist) => (
+                {props.cookList.filter((itemlist) => itemlist.value>0).map((itemlist) => (
                 <ListGroupItem key={itemlist.id}>
                 <div>
                   <img className="CartImage"
@@ -55,7 +59,7 @@ export const Cart = (props) => {
       }
     </div>
   );
+
 }
 
-
-
+export default Cart;
