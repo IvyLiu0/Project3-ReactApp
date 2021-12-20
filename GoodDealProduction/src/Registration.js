@@ -22,7 +22,7 @@ function Registration() {
     function handleFormSubmit(e) {
         e.preventDefault();
 
-        if (!name || !email || !password || !phone || !profession) {
+        if (!name || !email || !password || !phone) {
             setFlag(true);
 
         } else {

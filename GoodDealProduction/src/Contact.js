@@ -31,8 +31,7 @@ const Contact = () => {
             })
         })
         .then(()=>{
-            alert('We receive your message. We will contact you soon. Thank you!');
-            
+            alert('We receive your message. We will contact you soon. Thank you!')
             // Swal.fire('Any fool can use a computer');
             
         })
